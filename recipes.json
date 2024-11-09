@@ -1,0 +1,72 @@
+{
+    "crafting":{
+        "minecraft:iron_pickaxe": {
+            "scheme":[
+                [["minecraft:iron_ingot",{"count":1}],["minecraft:iron_ingot",{"count":1}],["minecraft:iron_ingot",{"count":1}]],
+                ["",["minecraft:stick",{"count":1}],""],
+                ["",["minecraft:stick",{"count":1}],""]
+            ],
+            "input_c":"minecraft:barrel_2",
+            "count":1,
+            "output_c":"minecraft:barrel_9",
+            "result":"minecraft:iron_pickaxe"
+        },
+        "minecraft:oak_planks": {
+            "scheme":[
+                ["",["minecraft:oak_log",{"count":1}],""],
+                ["","",""],
+                ["","",""]
+            ],
+            "input_c":"minecraft:barrel_2",
+            "output_c":"minecraft:barrel_9",
+            "count":4,
+            "result":"minecraft:oak_planks",
+            "multi_craft":true,
+            "multi_limit":64
+        },
+        "minecraft:crafting_table": {
+            "scheme":[
+                [["minecraft:oak_planks",{"count":1}],["minecraft:oak_planks",{"count":1}],""],
+                [["minecraft:oak_planks",{"count":1}],["minecraft:oak_planks",{"count":1}],""],
+                ["","",""]
+            ],
+            "input_c":"minecraft:barrel_2",
+            "output_c":"minecraft:barrel_9",
+            "count":1,
+            "result":"minecraft:crafting_table",
+            "multi_craft":true,
+            "multi_limit":64
+        }
+    },
+    "custom":{
+        "minecraft:iron_ingot":{
+            "devices":{
+                "minecraft:furnace_5":{
+                    "2":["minecraft:coal",{"count":1}],
+                    "1":["minecraft:raw_iron",{"count":8}],
+                    "3":["output"]
+                }
+            },
+            "count":8,
+            "result":"minecraft:iron_ingot",
+            "redstone":true
+        },
+        "create:iron_sheet":{
+            "devices":{
+                "minecraft:barrel_10":{
+                    "1":["minecraft:iron_ingot",{"count":1}]
+                },
+                "minecraft:barrel_11":{
+                    "1":["output",{"count":1}]
+                }
+
+            },
+            "count":1,
+            "result":"create:iron_sheet",
+            "multi_craft":true,
+            "multi_limit":64,
+            "redstone":true
+        }
+    }
+}
+ 
