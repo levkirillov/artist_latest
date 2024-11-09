@@ -20,16 +20,16 @@ local inserting = false
 local reserving = false
 
 
-local file = io.open("crafting_status.json", "w")
+local file = io.open(shell.dir().."/crafting_status.json", "w")
 file:write("{}")
 file:close()
-local file = io.open("log.txt", "w")
+local file = io.open(shell.dir().."/log.txt", "w")
 file:write("")
 file:close()
 
 -- Load the recipes from the file
 local function load_recipes()
-    local file = io.open("recipes.json", "r")
+    local file = io.open(shell.dir().."/recipes.json", "r")
     if file then
         local content = file:read("*a")
         file:close()
@@ -137,7 +137,7 @@ function save_crafting_status(status)
         end
     end
 
-    local file = io.open("crafting_status.json", "w")
+    local file = io.open(shell.dir().."/crafting_status.json", "w")
 
     file:write(json.encode(status))  -- Save as JSON array
     file:close()
@@ -146,7 +146,7 @@ end
 
 -- Load the crafting process from a file
 function load_crafting_status()
-    local file = io.open("crafting_status.json", "r")
+    local file = io.open(shell.dir().."/crafting_status.json", "r")
     if file then
         local content = file:read("*a")
         file:close()
